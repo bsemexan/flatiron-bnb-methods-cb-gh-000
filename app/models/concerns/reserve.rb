@@ -21,8 +21,8 @@ module Reserve
 
   class_methods do
     def highest_ratio_res_to_listings
-      self.all.max_by do |a, b|
-        a.ratio_reservations_to_listings <=> b.ratio_reservations_to_listings
+      self.all.max_by do |ratio|
+        a.ratio_reservations_to_listings <=> ratio.ratio_reservations_to_listings
       end
     end
 
