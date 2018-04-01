@@ -22,7 +22,9 @@ module Reserve
   class_methods do
     def highest_ratio_res_to_listings
       all.max do |ratio|
-        ratio.ratio_reservations_to_listings <=> ratio.ratio_reservations_to_listings
+        if ratio.listings.count > 0 && ratio.reservations.count > 0
+          reservations.count.to_f / listings.count.to_f
+        end
       end
     end
 
