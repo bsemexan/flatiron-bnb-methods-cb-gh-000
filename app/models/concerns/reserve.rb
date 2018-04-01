@@ -14,7 +14,7 @@ module Reserve
   end
 
   def ratio_reservations_to_listings
-    if listings.count > 0 || reservations.count > 0
+    if listings.count > 0 && reservations.count > 0
       reservations.count.to_f / listings.count.to_f
     end
   end
