@@ -23,7 +23,7 @@ module Reserve
     def highest_ratio_res_to_listings
       all.max_by do |ratio|
         if ratio.ratio_reservations_to_listings
-
+          ratio.ratio_reservations_to_listings
         else
           0
         end
