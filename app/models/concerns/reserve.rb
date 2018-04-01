@@ -21,7 +21,7 @@ module Reserve
 
   class_methods do
     def highest_ratio_res_to_listings
-      all.max do |ratio|
+      all.max_by do |ratio|
         if ratio.ratio_reservations_to_listings
 
         else
