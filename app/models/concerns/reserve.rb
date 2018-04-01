@@ -24,6 +24,8 @@ module Reserve
       all.max_by do |ratio|
         if ratio.listings.count > 0 && ratio.reservations.count > 0
           ratio.reservations.count.to_f / ratio.listings.count.to_f
+        else
+          0
         end
       end
     end
